@@ -1,25 +1,36 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/16/2016 8:09:16 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SKYNET"
   DTS:CreatorName="SKYNET\andersonkmi"
-  DTS:DTSID="{E4C32FD0-3CC0-4B8B-9D31-E778E6917318}"
+  DTS:DTSID="{C4FA6D03-A02F-4586-A525-A19D29548354}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2164.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Lesson2"
+  DTS:ObjectName="Lesson3"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{621155EB-241D-4F11-9AB3-606806F60C19}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{0C72CC19-0DE0-4D75-81F7-98FA4AB19781}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Lesson3.log]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{4585E2E3-60C0-4FEA-B98E-8F0F8CF68DCF}"
+      DTS:ObjectName="Lesson3.log">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="D:\andersonkmi\development\ssis-tutorial\Lesson3.log" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost.AdventureWorksDW2012.sa]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{0A37BE7F-6ECA-484F-A4BF-2D2C74F7CF87}"
+      DTS:DTSID="{EB146965-C10D-4A5A-9F27-E3798DB9635D}"
       DTS:ObjectName="localhost.AdventureWorksDW2012.sa">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -27,14 +38,14 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg1jrFS6fWk2OxCbd65LZBQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADJkZ1I1d+DzlF+fwTjD+1tmZ+/W4BiPLYeZr5XVrjgCQAAAAAOgAAAAAIAACAAAAD7VBmHdMmxvmepfEw3obsfUhV0PXU7aAjP1wJHA3bdfiAAAAD0ErO4UV9ctSS1srTwjJhlXTadxClwSmiLRLh7gpVFEEAAAADwKnN6l5sKjil1XW+da6wmmqUedgfpsMRZBAEJvyeFUczgO+RUVM/XHQ+W6cxovNq2+WanYqo687ZTnWFI95xS</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg1jrFS6fWk2OxCbd65LZBQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADauODF0IaYGplVJ5YeBuEC/s/eFXqDlmfiIxigqO43ngAAAAAOgAAAAAIAACAAAAAATuXqNApH1TNxTDFgOC11BooD7bgn0D+qUCtdEMTt9SAAAAADmnQ7OfJw5RZW1HDxpZ3c3o+6Okmo8xkbjUQvlHa9i0AAAAAx6uMX7RrnAocjLyOcOkCKZJ+8+e4jwNH81IYHhnTR/wGfaHs552W6Ue62f3sYb72/4Gu2Tn5ble4trKtkC2dx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Sample Flat File Source Data]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{162A13C7-4AC0-4CE4-91DF-C8D214D2BE4B}"
+      DTS:DTSID="{6C544E46-E96D-48E1-9E5C-92EF7D99BF94}"
       DTS:ObjectName="Sample Flat File Source Data">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::varFileName]</DTS:PropertyExpression>
@@ -54,7 +65,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{723D9693-0DFA-429E-BA27-58D437C4D3FE}"
+              DTS:DTSID="{41EAB33A-9A5F-4130-9517-3CEEEF9B4F26}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +74,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{6217BFB0-6F1F-4846-A7FE-EDA54CF07702}"
+              DTS:DTSID="{E5066304-1F10-4DF8-80BB-D051820D88EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +82,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{806365D2-6A1D-4FDC-A35B-8FA6C01E3216}"
+              DTS:DTSID="{21C37463-7676-47A7-A743-FAD77DB06DE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,17 +90,29 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{FAC8F472-41D2-43F4-A4D8-5CF1AA3207F9}"
+              DTS:DTSID="{02C3FE88-C9FC-4773-8667-7438E2AE447A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="Lesson3.log"
+      DTS:CreationName="Microsoft.LogProviderTextFile"
+      DTS:Description="Writes log entries for events to a CSV file"
+      DTS:DTSID="{A5358BB9-9546-4A0A-9A51-08D6B067B694}"
+      DTS:ObjectName="Lesson 3 log file">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{BA88B26E-7C87-407E-8B2E-ECAA6724333E}"
+      DTS:DTSID="{A6303349-FAA0-4CC5-A481-89ED63BE2BCE}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileName">
@@ -98,19 +121,22 @@
         xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2" />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Foreach File in Folder"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{6C87A92A-AAE1-4B1D-991F-18307613ED00}"
+      DTS:DTSID="{5BB07452-C1ED-437B-996C-5A84E83FB3F4}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach File in Folder">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{F4F00AF5-E2EC-4549-ACE2-A8584C709587}"
-        DTS:ObjectName="{F4F00AF5-E2EC-4549-ACE2-A8584C709587}">
+        DTS:DTSID="{D71E5BA6-9E89-4EEB-9A4C-6E8F770C7207}"
+        DTS:ObjectName="{D71E5BA6-9E89-4EEB-9A4C-6E8F770C7207}">
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
@@ -125,17 +151,67 @@
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Foreach File in Folder\Extract Sample Currency Data"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{CCBC5FA7-EA71-4289-995B-96570C0A6867}"
+          DTS:DTSID="{78093C65-6FB3-4BE2-80F4-A8D42C4997BD}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="Extract Sample Currency Data"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="1">
+            <DTS:Property
+              DTS:DataType="8"
+              DTS:Name="EventFilter">2,21,PipelineExecutionPlan,22,PipelineExecutionTrees</DTS:Property>
+            <DTS:Property
+              DTS:EventName="PipelineExecutionPlan"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:Property
+              DTS:EventName="PipelineExecutionTrees"
+              DTS:Name="ColumnFilter">
+              <DTS:Property
+                DTS:Name="Computer">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="Operator">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceName">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="SourceID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="ExecutionID">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="MessageText">-1</DTS:Property>
+              <DTS:Property
+                DTS:Name="DataBytes">-1</DTS:Property>
+            </DTS:Property>
+            <DTS:SelectedLogProviders>
+              <DTS:SelectedLogProvider
+                DTS:InstanceID="{A5358BB9-9546-4A0A-9A51-08D6B067B694}" />
+            </DTS:SelectedLogProviders>
+          </DTS:LoggingOptions>
           <DTS:ObjectData>
             <pipeline
               version="1">
@@ -867,8 +943,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{3A87C0C1-2328-48A6-9F61-CC103878C1D0}"
-          DTS:ObjectName="{3A87C0C1-2328-48A6-9F61-CC103878C1D0}"
+          DTS:DTSID="{C0050F4C-C415-4F37-9FA2-35A0B1EB1C8D}"
+          DTS:ObjectName="{C0050F4C-C415-4F37-9FA2-35A0B1EB1C8D}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
